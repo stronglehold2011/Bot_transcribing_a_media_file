@@ -17,7 +17,7 @@ Telegram-бот для транскрибации голосовых сообщ�
 Проект организован по модулям:
 - `bot/handlers/` — обработчики Telegram-команд и сообщений
 - `bot/services/` — работа с Whisper, ffmpeg, утилиты
-- `db/models.py` — работа с PostgreSQL
+- `db/models.py` — работа с PostgreSQL. Здесь не модели, а функции доступа к БД (DAL). Название models.py оставлено для совместимости со стандартной структурой.
 - `config/settings.py` — загрузка настроек из `.env`
 
 
