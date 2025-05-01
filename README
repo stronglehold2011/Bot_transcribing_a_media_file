@@ -29,21 +29,21 @@ Telegram-бот для транскрибации голосовых сообщ�
 pip install -r requirements.txt
 ```
 
-> ⚠️ Важно: для работы PostgreSQL необходимо установить `psycopg[binary]`:
-```bash
+Важно: для работы PostgreSQL необходимо установить `psycopg[binary]`:
+bash:
 pip install "psycopg[binary]"
-```
+
 
 2. Настройка переменных окружения
-Создайте `.env` в корне проекта:
-```env
+Создайте ".env" в корне проекта:
+".env" содержит:
 BOT_TOKEN=токен_вашего_бота
 DB_NAME=имя_вашей_базы
 DB_USER=пользователь
 DB_PASSWORD=пароль
 DB_HOST=localhost
 DB_PORT=5432
-```
+
 
 3. Убедитесь, что установлен ffmpeg
 Для Windows: https://ffmpeg.org/download.html
@@ -51,11 +51,9 @@ DB_PORT=5432
 
 4. Запуск
 Из корня проекта:
-```bash
+bash:
 python -m bot.main
-```
 
----
 
 Авторизация пользователей
 - Все пользователи сначала "неодобрены"
@@ -66,7 +64,7 @@ python -m bot.main
 
 Ручная инициализация базы (если нужно)
 Если база не создаётся автоматически, можно вручную:
-```sql
+sql:
 CREATE TABLE users (
     id BIGINT PRIMARY KEY,
     name TEXT,
